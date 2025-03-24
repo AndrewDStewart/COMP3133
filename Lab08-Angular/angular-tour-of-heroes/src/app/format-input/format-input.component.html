@@ -1,0 +1,26 @@
+<div>
+    <h3>Custom Directive Demo</h3>
+    
+    <div class="input-container">
+      <div class="input-group">
+        <label for="formatted-input">Original Input:</label>
+        <input id="formatted-input" 
+               type="text" 
+               [(ngModel)]="inputText" 
+               (blur)="updateTransformedText()"
+               inputFormat
+               (formatted)="updateTransformedText()">
+      </div>
+      
+      <div class="result-group">
+        <label>After Blur (Uppercase):</label>
+        <div class="result-box">{{transformedText}}</div>
+      </div>
+    </div>
+    
+    <div class="instructions">
+      <p>1. Type some text in the input field</p>
+      <p>2. Click outside the input field (blur event)</p>
+      <p>3. See the uppercase result in the box below</p>
+    </div>
+  </div>
